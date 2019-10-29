@@ -16,7 +16,7 @@ namespace PracticasGenerales
              */
             int[] edades = { 16, 25, 19, 80 };
             //int[] edades1 = new int[5] { 16, 25, 19, 80, 20 };
-            Console.WriteLine(edades[4]);
+            Console.WriteLine(edades[2]);
 
             //array implicito
             var datos = new[] { "Israel", "Jimenez", "Ecuador" };
@@ -37,6 +37,11 @@ namespace PracticasGenerales
                 new{Nombre="Maria", Edad=49},
                 new {Nombre="Ana", Edad=25}
             };
+            for (int i = 0; i < personas.Length; i++)
+            {
+                Console.WriteLine($"Las personas son: {personas[i]}");
+            }
+
 
         }
     }
