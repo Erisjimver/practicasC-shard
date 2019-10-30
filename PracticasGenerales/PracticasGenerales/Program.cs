@@ -41,8 +41,45 @@ namespace PracticasGenerales
             {
                 Console.WriteLine($"Las personas son: {personas[i]}");
             }
+            int[] numeros = new int[4];
+            numeros[0] = 7;
+            numeros[1] = 9;
+            numeros[2] = 15;
+            numeros[3] = 3;
+            ProcesarDatos(numeros);
 
+            //crear un array por consola
+            //leerDatos();
+            int[] arrayElementos=leerDatos();
+            foreach (int i in arrayElementos) Console.WriteLine(i);
+            
 
+            
+        }
+        static void ProcesarDatos(int[] datos)
+        {
+            foreach (int i in datos)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        static int[] leerDatos()
+        {
+            Console.WriteLine("¿Cuantos elementos contendra el arreglo? ");
+            string respuesta = Console.ReadLine();
+            int numElementos = int.Parse(respuesta);
+            int[] datos = new int[numElementos];
+
+            for (int i = 0; i < numElementos; i++)
+            {
+                Console.WriteLine($"Introduce el dato para la posicion{i} ");
+                respuesta = Console.ReadLine();
+                int datosElementos = int.Parse(respuesta);
+                datos[i] = datosElementos;
+
+            }
+            return datos;
         }
     }
 
